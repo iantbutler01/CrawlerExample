@@ -7,7 +7,7 @@ the curiosity and experience with Elixir to expand pretty quickly.
 
 Some quick suggestions for someone wanting to take on a bigger crawling project:
 
-- Look into a proper DB backed or a mutable in memory store like Redis for managing worker state
+- Look into a proper DB backed or a mutable in memory store like Redis for managing job state/ownership
 - Build a separate GenServer that is the worker manager and is responsible from doling out work from the queue to workers
 - Make workers into a long running process instead of a simple function call, let them possibly manage a small separate work queue per worker
 - Store results in a document store like MongoDB or a kv-store like S3 or Riak.
